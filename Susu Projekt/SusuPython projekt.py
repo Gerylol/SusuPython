@@ -64,10 +64,12 @@ class Csata:
       jatekos_szerencse -= 1
       jatekos_eletero += 1
 
-    if nyertel1_valasz == 'Nem':
-      return "Vesztettél!"
-    if nyertel1_valasz == 'Nem':
-      return "Vesztettél!"
+    while nyertel1_valasz == 'Nem':
+      return 'vesztettél!'
+    while nyertel2_valasz == 'Nem':
+      print("Vesztettél!")
+      break
+      
 
 valasz_igen = ["Igen", "I", "igen", "i"]
 valasz_nem = ["Nem", "N", "nem", "n"]
@@ -94,40 +96,40 @@ jatekos_ugyesseg = kezdeti_ugyesseg
 teremtmeny_eletero = 6
 jatekos_eletero = kezdeti_eletero
 
-nyertel1 = input("Nyertél? [igen/nem]")
+nyertel1_valasz = input("Nyertél? [igen/nem]")
 if nyertel1_valasz == "igen":
   print("\n85. A Tolvajnál mindössze 3 Aranytallert és egy háromszög alakú, penészes gyümölcsöt találsz. Még soha nem láttál chhez hasonlót, de gyanitod, hogy ez lehet a Xentos, a hosszú élet gyümölcse. Ha nem lenne ilyen borzalmas állapotban, gond nélkül megko káztatnád, hogy belekóstolj, igy azonban úgy döntesz, hogy itt hagyod és folytatod az utad észak felé. Hamarosan egy útelágazás-hoz érsz. Ha továbbra is északnak tartasz lapozz a 108-ra. Ha a nyugati irányba lo gazó új járaton mennél tovább, lapozz a 147-re.\n")
 if nyertel1_valasz == "nem":
   print("Vesztettél!")
       
-irany = input("Melyik irányba szeretnél tovább haladni? [észak/nyugat]")
+irany_valasz = input("Melyik irányba szeretnél tovább haladni? [észak/nyugat]")
 if irany_valasz == "észak":
   print("\n108. Északi irányba követed az átjárót. Hamarosan elérsz egy keleti elágazáshoz. Hogyha egyenesen mész tovább, lapozz a 146-ra. Ha letérsz jobbra, lapozz a 79-re.\n")
 
 if irany_valasz == "nyugat":
   print("\n144. Mikor már félúton jársz a fényfolt felé, a talaj megnyílik alattad, de még az elött sikerül visszalépned, hogy te is beleesnél - korábbi óvatosságod meghozta gyümölcsét. Ahogy közelebbről is megvizsgálod, megállapítod, hogy egy kis, kör alakú verem az a padló kellős közepén. Rozoga létra fut lefelé végig az oldalán, de vagy túl sötét van, vagy túl mély lyuk, mert nem látod az alját. Ha szét akarsz nézni benne, lapozz a 7-re. Ha inkább átugórnád és kiderítenéd, mi a fényfolt forrása, lapozz a 96-ra.\n")
 
-szetnezni = input("Szét akarsz nézni benne?")
+szetnezni_valasz = input("Szét akarsz nézni benne? [igen/nem]")
 if szetnezni_valasz == "igen":
   print('\n7. Mikor végül eléred a verem alját, semmit nem látsz. A falakat végigtapogatva annyit meg tudsz állapítani, hogy az alagút kelet felé megy tovább. Ha a vaksötét ellenére is bevállalod ezt a járatot, lapozz a 165-re. Ha inkább visszatérnél a fenti folyosóra és északnak folytatnád az utad, lapozz a 96-ra.\n')
 
 if szetnezni_valasz == "nem":
   print('\n 96. Az alagút kanyarulata mögül túlvilági ragyogás árad. Ahogy a falra vetült játékot nézed, úgy érzed, a fény magától lüktet és változtatja a színét. Nagyon óvatosan fordulsz be a kanyarban, amin tul igen bizarr látvány fogad. Három nagyon alacsony, ezüstszínů, lebegő kopenybe öltözött alak táncol valamilyen rituális táncot a fény forrása körül. Az üreg falát itt mindenhol tükrök borítják, és a változó színek oda- vissza ugrálnak azok közt, a lüktető ragyogástól és szédülés tör rád. A forrás egy hatalmas kristály, mely egy magas talapzaton nyugszik, de képtelen vagy megállapítani, pontosan miféle kő is ez. Egyébként sincs idöd sokat spekulálni ezen, mivel az ezernyi tükörképnek köszönhetően az ala- kok felfigyelnek egy óvatlan mozdulatodra. A lények dühödten felkiáltva vetik rád magukat. Egy ellenfélként küzdj meg vele. Ha győzöl, lapozz a 191-re.\n')
 
-nyertel2 = input("Nyertél? [igen/nem]")
+nyertel2_valasz = input("Nyertél? [igen/nem]")
 if nyertel2_valasz == "igen":
   print("\n191. A három teremtmény estèt ikatata fo jenkint Aranytallért találsz. Eztina Kristályhoz lepsz, a belőle áradó, gytery rien biktető feny azonban már halványodni kendett, és mire felemeled, már csak egy nagy, driddelen avugombot tartasz a ke zodben. Kirumkodva vagod a foldhor, abol darabokra torik. A barlangban azon kival cupin egyetlen érdekes dolgot találsz egy nagyjából egy méter mórójú lyukat a fal- ban, több moter magasan. Elé húzod az emelvényt, melyen korábban a kristály állt, thills es batekintesz rajta. Sina csúszdát pillantasz meg, mely anyhén lelle lujt. He eran a lyuk at akarod folytatni at utal, la- pozz a 123-m. Ha az északi alagúton it tivomál, lapozz a 33-ra\n")
 if nyertel2_valasz == "igen":
   print("Vesztettél!")
 
-lyuk = input("Ezen a lyukon át akarod folytatni?")
+lyuk_valasz = input("Ezen a lyukon át akarod folytatni?")
 if lyuk_valasz == 'igen':
   print("\n123. Nagy nehezen bemászol a lyukba és ereszkedni kezdesz. A levegő hőmérsékleté rohamosan növekedni kezd, és rájössz, hogy nagy hibát követtél el. Egyenesen egy föld-alatti kemence felé tartasz. Lángnyelvek csapnak feléd, ahogy próbálsz visszamászni a lejtőn. Kétségbeesetten kaparod a falat, de képtelen vagy megakadályozni, hogy a tűz kellős közepébe ne zuhanj. Ahogy a csúszda végéhez közeledsz, már a láng pattanásait is hallod, és megpillantod a pokoli lángnyelveket. Lendületed miatt egy ideig még a levegőben repülsz utána azonban, ahogy fejjel előre a tűzbe zuhansz, a szörnyű meleg egy pillanat alatt füstpamaccsá változtat. Kalandod itt véget ér, VESZTETTÉL!\n")
 
 if lyuk_valasz == "nem":
   print("\n33. Az alagút egy ideig kanyarog, de végig észak felé megy. Hamarosan egy ajtó jelenik meg a jobb oldali falban. Ha megnézed nyitva van-e. Lapozz, az 5-re. Ha inkább hagynád az ajtót és tovább folytatnád az utadat. lapozz a 14-re.\n")
 
-megnezed = input("Megnézed? [igen/nem]")
+megnezed_valasz = input("Megnézed? [igen/nem]")
 if megnezed_valasz == "igen":
   print("\n5. Az ajtó egy tágas terembe nyílik, melynek északi oldalán egy újabb kijárat van, egy lelógó kötél szomszédságában. Csapdának nem látod jelét, így áthaladsz a szobán és leveszed a kötelet. Lenyomod a kilincset, de így sem sikerül előrébb jutnod, alighanem zárva van. Ha van nálad egy Aranykulcs, lapozz a 110-re. Hogyha nincs, úgy távozol a szobából és folytatod, az utadat északi irányba lapozz a 14-re\n")
 
@@ -139,7 +141,7 @@ tovabb = input("")
 if tovabb in tovabb_valasz:
   print("\n67 Az alagút hamarosan tágulni kezd és csodálatos látvány tárul a szemed elé. Egy földalatti völgyet határoló magas sziklafal kellős közepén, egy keskeny szirten találod magad. Nem látsz lefelé vezető utat, és nem mered megkockáztatni, hogy visszafordulj, Nálad van a Lebegés Köpenye? Ha igen, lapozz a 105-re. Ha nem, lapozza 86-ra\n")
 
-lebeges_kopenye = input("Nálad van a Lebegés Köpenye [igen/nem]")
+lebeges_kopenye_valasz = input("Nálad van a Lebegés Köpenye [igen/nem]")
 if lebeges_kopenye_valasz == "igen":
   print("\n105. Döbbenten veszed észre, hogy köpenyed felfúvódik és felemel a lábadról. Lassan lebegsz le a talajra, és könnyedén érsz földet. Alig mered elhinni, mekkora szerencséd van. Lapozza 27- re.\n")
 if lebeges_kopenye_valasz == "nem":
@@ -150,7 +152,7 @@ tovabb = input("")
 if tovabb in tovabb_valasz:
   print("\n27. Egy hatalmas völgy lábánál állsz, melyet egy gyors folyású folyó vájt ki. Próbálsz valami megoldást találni az átkelésre, de csak egy kicsi, eléggé rozoga és korhadt hidat látsz. Ahogy megközelíted, látod. amint két óriási termesz eszi a fát. Hófehér testükön igen nyugtalanítóan hat két vérvörös szemük. A lények bármelyike bármikor beléd marhatna. Ha sietsz talán még sikerül átkelned rajta azelőtt, hogy végleg összeroskadna. A másik lehetőséged, hogy megpróbálsz átúszni a sebes folyón. Ha az első megoldást választod, lapozz a 40-re. Ha úgy gondolod, elég jó úszó vagy. ezzel próbálkoznál, lapozz a 2-re.\n")
 
-szerencse = input("Próbára tetted a szerencséd. Volt szerencséd vagy nem? [igen/nem]")
+szerencse_valasz = input("Próbára tetted a szerencséd. Volt szerencséd vagy nem? [igen/nem]")
 if szerencse_valasz == "igen":
   print("\n190:Már majdnem dired a sziklaszint aljat amikor a kötel clogy Innon le kell uera- nod. Nagyjából két méterre van alattad a talaj, de clég sildas. Tad próbána - cao Ta szarencsés vagy, biztonsághan sebesülés nélkül landols a talajon lapozz 27. Hogyha nincs szurumusod, lapozz 54-es.\n")
 
